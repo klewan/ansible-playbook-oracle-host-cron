@@ -1,0 +1,15 @@
+
+- name: oracle
+  src: https://github.com/klewan/ansible-role-oracle.git
+  scm: git
+  #version: develop
+  #version: feature/init
+  #version: master
+
+- name: oracle-host-cron
+  src: https://github.com/klewan/ansible-role-oracle-host-cron.git
+  scm: git
+  #version: develop
+  #version: feature/init
+  #version: master
+

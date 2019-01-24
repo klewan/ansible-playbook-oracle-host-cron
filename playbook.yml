@@ -1,0 +1,20 @@
+---
+- name: Configure Oracle database server cron
+  hosts: ora-servers
+  gather_facts: true
+  become: true
+  become_user: '{{ oracle_user }}'
+
+  tasks:
+
+  - import_role:
+      name: oracle-host-cron
+    vars:
+      oracle_host_cron_copy_scripts: true
+#      oracle_host_cron_copy_scripts: false
+      oracle_host_cron_disable_jobs: false
+#      oracle_host_cron_disable_jobs: true
+      oracle_host_cron_manage_cron_jobs: true
+    tags:
+      - oracle_host_cron
+
